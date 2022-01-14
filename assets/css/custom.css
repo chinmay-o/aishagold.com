@@ -1,0 +1,154 @@
+
+
+.logo-custom img {
+
+  max-width: 160px;
+}
+
+.card-submit {
+
+  margin-top: 30px !important;
+}
+
+.person-comment p {
+
+  min-height: 120px;
+}
+
+.social-media-icon {
+
+  color: #df9223 !important;
+  font-size: 20px !important;
+}
+
+.intro-slider-position-bottom {
+
+  background-position: bottom !important;
+}
+
+.sub-heading-custom {
+
+  font-weight: 700 !important;
+}
+
+.about-us-subheading-custom {
+
+  font-weight: 300 !important;
+}
+
+.padding-bottom-custom {
+
+  padding-bottom: 0 !important;
+}
+
+.padding-top-custom {
+
+  padding-top: 0 !important;
+}
+
+.our-works-custom {
+
+  padding-top: 100px !important;
+  margin-bottom: 30px !important;
+}
+
+.enquiry-icon {
+
+  margin-left: 22px;
+  margin-top: 16px;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.footer-custom {
+
+  margin-top: 100px !important;
+}
+
+.about-us-custom {
+
+  margin-bottom: 30px !important;
+}
+
+.padding-bottom-custom-about-us {
+
+  padding-bottom: 70px !important;
+}
+
+.map-custom {
+
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: inherit;
+}
+
+.portfolio-custom {
+
+  padding-top: 20px !important;
+}
+
+.footer-section {
+
+  background: #df9223;
+}
+
+.footer-font-custom {
+
+  color: #ffffff !important;
+}
+
+.brand-logo-footer {
+
+  max-width: 200px !important;
+}
+
+.footer-custom-portfolio {
+
+  padding-top: 100px !important;
+}
+
+.footer-credits {
+
+  text-align: center;
+  margin-top: 60px;
+}
+
+.footer-credits h6 {
+
+  color: white;
+  font-size: 12px;
+  font-weight: 400 !important;
+}
+
+.social-media-footer {
+
+  font-size: 12px;
+  font-weight: 400 !important;
+}
+
+.footer-credits a {
+
+  color: white !important;
+}
+
+.footer-section {
+
+  padding-top: 60px !important;
+  padding-bottom: 20px !important;
+}
+
+@media screen and (max-width: 767px) {
+
+  .brand-logo-footer {
+
+    margin-top: 16px;
+    max-width: 150px !important;
+  }
+
+  .social-media-icon {
+
+    color: #ffffff !important;
+    font-size: 18px !important;
+  }
+}
