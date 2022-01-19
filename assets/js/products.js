@@ -54,7 +54,7 @@ function productsShowcase () {
 
 function productHTML() {
 
-  if (htmlPath == '/products.html') {
+  if (htmlPath == '/aishagold.com/products.html') {
 
     for (var i = 0; i < productArray.length; i++) {
 
@@ -70,7 +70,7 @@ function productHTML() {
         '</div>'
     }
 
-  } else if (htmlPath == '/add-products.html') {
+  } else if (htmlPath == '/aishagold.com/add-products.html') {
 
     for(var i = 0; i < productArray.length; i++) {
 
