@@ -42,10 +42,7 @@ function checkAPILoader() {
   if (goldRateArray != 0) {
 
     goldRateCardUpdate();
-    if (window.location.pathname == '/' || window.location.pathname == '/index.html') {
-
-      goldRateHomeDisplay();
-    }
+    goldRateHomeDisplay();
     clearInterval(loadAPI);
   }
 }
