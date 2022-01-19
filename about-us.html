@@ -50,12 +50,13 @@
 
 				<header>
 					<h1>Today's Gold Rate</h1>
-					<h1>Date</h1>
+					<h1 id="goldRateDate"></h1>
 				</header>
 
-				<p>24 Karat 1 Gram:</p>
-				<p>18 Karat 1 Gram:</p>
-				<p>Silver:</p>
+				<p>22 Karat 1 Gram: ₹<span id="goldRate22K"></span></p>
+				<p>22 Karat 8 Gram: ₹<span id="goldRate22K8"></span></p>
+				<p>18 Karat 1 Gram: ₹<span id="goldRate18K"></span></p>
+				<p>Silver: ₹<span id="goldRateSilver"></span></p>
 
 				<div class="img ba-logo logo-ani"></div>
 			</div>
@@ -102,15 +103,11 @@
 							<ul class="clearfix">
 
 								<li class="menu-item-has-child">
-									<a id="Service">GOLD RATE</a>
+									<a href="index.html">HOME</a>
 								</li>
 
 								<li class="menu-item-has-child">
-									<a id="Products">PRODUCTS</a>
-								</li>
-
-								<li class="menu-item-has-child">
-									<a id="About_Us">ABOUT US</a>
+									<a href="products.html">PRODUCTS</a>
 								</li>
 
 								<li class="menu-item-has-child">
@@ -132,16 +129,8 @@
 				<div id="menu-list" class="menu-list ul-li-block clearfix">
 					<ul class="clearfix">
 
-						<li class="menu-item-has-child">
-							<a id="ServiceMobile" aria-expanded="false">GOLD RATE</a>
-						</li>
-
 						<li>
-							<a id="ProductsMobile" aria-expanded="false">PRODUCTS</a>
-						</li>
-
-						<li>
-							<a id="About_UsMobile" aria-expanded="false">ABOUT US</a>
+							<a href="products.html" aria-expanded="false">PRODUCTS</a>
 						</li>
 
 						<li>
@@ -172,7 +161,7 @@
 
 						<div class="col-lg-4 col-md-7 col-sm-8 col-xs-12">
 							<div class="about-image" data-aos="fade-up" data-aos-delay="100">
-								<img src="assets/images/custom/custom-gold03.jpg" alt="image_not_found">
+								<img src="assets/images/backgrounds/8.jpg" alt="image_not_found">
 							</div>
 						</div>
 
@@ -186,7 +175,7 @@
 									quality products and premium service since 2000. Spread across 11 showrooms
 									all over Kannur, Aisha gold is one of the leading jewellery brand in kerala.
 								</p>
-								<a id="beginNowTwo" href="about-us.html" class="btn">We are at</a>
+								<a id="beginNowTwo" class="btn">We are at</a>
 							</div>
 						</div>
 
@@ -199,7 +188,7 @@
       <!-- Works-section - start
 			================================================== -->
 			<section id="portfolio-section" class=" portfolio-section sec-ptb-100 clearfix">
-				<div class="container">
+				<div id="ContactContent" class="container">
 
 					<div class="section-title mb-60" data-aos="fade-up" data-aos-delay="100">
 						<h2 class="title-text">Places We Are At</h2>
@@ -436,26 +425,26 @@
 
 						<div class="item">
 							<a class="partner-logo item-grayscale" href="#!">
-								<img class="before-image" src="assets/images/partners/img_5.png" alt="image_not_found">
-								<img class="after-image" src="assets/images/partners/img_5.png" alt="image_not_found">
+								<img class="before-image" src="assets/images/partners/bis.png" alt="image_not_found">
+								<img class="after-image" src="assets/images/partners/bis.png" alt="image_not_found">
 							</a>
 						</div>
 						<div class="item">
 							<a class="partner-logo item-grayscale" href="#!">
-								<img class="before-image" src="assets/images/partners/img_6.png" alt="image_not_found">
-								<img class="after-image" src="assets/images/partners/img_6.png" alt="image_not_found">
+								<img class="before-image" src="assets/images/partners/916.png" alt="image_not_found">
+								<img class="after-image" src="assets/images/partners/916.png" alt="image_not_found">
 							</a>
 						</div>
 						<div class="item">
 							<a class="partner-logo item-grayscale" href="#!">
-								<img class="before-image" src="assets/images/partners/img_7.png" alt="image_not_found">
-								<img class="after-image" src="assets/images/partners/img_7.png" alt="image_not_found">
+								<img class="before-image" src="assets/images/partners/igi.png" alt="image_not_found">
+								<img class="after-image" src="assets/images/partners/igi.png" alt="image_not_found">
 							</a>
 						</div>
 						<div class="item">
 							<a class="partner-logo item-grayscale" href="#!">
-								<img class="before-image" src="assets/images/partners/img_8.png" alt="image_not_found">
-								<img class="after-image" src="assets/images/partners/img_8.png" alt="image_not_found">
+								<img class="before-image" src="assets/images/partners/silver.png" alt="image_not_found">
+								<img class="after-image" src="assets/images/partners/silver.png" alt="image_not_found">
 							</a>
 						</div>
 
@@ -632,23 +621,28 @@
 						</div>
 					</div>
 
-					<form id="contact_form" action="https://getform.io/f/8d4b2855-6559-40c4-bfb3-fcfa1d66ce80" method="POST">
+					<form id="enquiry_form">
 						<div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
 							<div class="col-lg-4">
 								<div class="form-item">
-									<input type="text" name="name" placeholder="Full Name">
+									<input id="enquiry_name" type="text" name="name" placeholder="Full Name">
 								</div>
 							</div>
 
 							<div class="col-lg-4">
 								<div class="form-item">
-									<input type="email" name="email" placeholder="Email Address">
+									<input id="enquiry_phone" type="text" name="mobile" placeholder="Mobile Number">
 								</div>
 							</div>
 
 							<div class="col-lg-4">
 								<div class="form-item">
-									<input type="text" name="message" placeholder="Mobile Number">
+									<select class="form-control" id="enquiry_subject" type="text" name="Subject">
+										<option>Select Subject</option>
+									  <option>Sales Enquiry</option>
+										<option>Corporate Enquiry</option>
+										<option>Complaints</option>
+									</select>
 								</div>
 							</div>
 
@@ -751,9 +745,17 @@
 		<!-- mobile menu - jquery include -->
     <script src="assets/js/mCustomScrollbar.js"></script>
 
+		<!-- Firebase Database JS -->
+		<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+	  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+	  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+	  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-storage.js"></script>
+
 		<!-- custom - jquery include -->
+		<script src="https://momentjs.com/downloads/moment.js"></script>
 		<script src="assets/js/custom.js"></script>
 		<script src="assets/js/enquiry.js"></script>
+		<script src="assets/js/gold-rate.js"></script>
 		<script src="assets/js/custom-js.js"></script>
 		<script src="assets/js/preloder.js"></script>
 

@@ -50,12 +50,13 @@
 
 				<header>
 					<h1>Today's Gold Rate</h1>
-					<h1>Date</h1>
+					<h1 id="goldRateDate"></h1>
 				</header>
 
-				<p>24 Karat 1 Gram:</p>
-				<p>18 Karat 1 Gram:</p>
-				<p>Silver:</p>
+				<p>22 Karat 1 Gram: ₹<span id="goldRate22K"></span></p>
+				<p>22 Karat 8 Gram: ₹<span id="goldRate22K8"></span></p>
+				<p>18 Karat 1 Gram: ₹<span id="goldRate18K"></span></p>
+				<p>Silver: ₹<span id="goldRateSilver"></span></p>
 
 				<div class="img ba-logo logo-ani"></div>
 			</div>
@@ -106,11 +107,11 @@
 								</li>
 
 								<li class="menu-item-has-child">
-									<a id="Products">PRODUCTS</a>
+									<a href="products.html">PRODUCTS</a>
 								</li>
 
 								<li class="menu-item-has-child">
-									<a id="About_Us">ABOUT US</a>
+									<a href="about-us.html">ABOUT US</a>
 								</li>
 
 								<li class="menu-item-has-child">
@@ -137,11 +138,11 @@
 						</li>
 
 						<li>
-							<a id="ProductsMobile" aria-expanded="false">PRODUCTS</a>
+							<a href="products.html" aria-expanded="false">PRODUCTS</a>
 						</li>
 
 						<li>
-							<a id="About_UsMobile" aria-expanded="false">ABOUT US</a>
+							<a href="about-us.html" aria-expanded="false">ABOUT US</a>
 						</li>
 
 						<li>
@@ -169,7 +170,7 @@
 			================================================== -->
 			<section id="slide-section" class="slide-section clearfix">
 				<div id="agency-default-carousel" class="architecture-carousel owl-carousel owl-theme">
-					<div class="item" data-background="assets/images/Intro_slider/Gold02.jpg">
+					<div class="item" data-background="assets/images/backgrounds/2.jpg">
 						<div class="item-content text-right">
 							<h3 class="item-title mb-0">
 								Give your personality a touch of purity.
@@ -177,7 +178,7 @@
 						</div>
 					</div>
 
-					<div class="item intro-slider-position-bottom" data-background="assets/images/Intro_slider/Gold02.jpg">
+					<div class="item intro-slider-position-bottom" data-background="assets/images/backgrounds/3.jpg">
 						<div class="item-content text-right">
 							<h3 class="item-title mb-0">
 								Designed with art and expertise.
@@ -185,7 +186,7 @@
 						</div>
 					</div>
 
-					<div class="item" data-background="assets/images/Intro_slider/Gold02.jpg">
+					<div class="item" data-background="assets/images/backgrounds/4.jpg">
 						<div class="item-content text-right">
 							<h3 class="item-title mb-0">
 								A whole different way of living your life.
@@ -214,7 +215,7 @@
 					<div class="row align-items-center justify-content-lg-between justify-content-md-between justify-content-sm-center">
 						<div class="col-lg-5 col-md-6 col-sm-8 col-xs-12">
 							<div class="about-image creative-image" data-aos="fade-up" data-aos-delay="100">
-								<img src="assets/images/custom/custom-gold01.jpg" alt="image_not_found">
+								<img src="assets/images/backgrounds/7.jpg" alt="image_not_found">
 							</div>
 						</div>
 
@@ -246,7 +247,7 @@
 
 						<div class="col-lg-5 col-md-6 col-sm-7 order-last">
 							<div class="about-image-service" data-aos="fade-up" data-aos-delay="100">
-								<img src="assets/images/custom/custom-gold02.jpg" alt="image_not_found">
+								<img src="assets/images/backgrounds/5.jpg" alt="image_not_found">
 							</div>
 						</div>
 
@@ -254,28 +255,33 @@
 							<div class="about-content" data-aos="fade-up" data-aos-delay="300">
 								<h2 class="sub-heading-custom item-title mb-60">
 									Today's Gold Rate<br>
-									<span>--Date--</span>
+									<div id="homeGoldDate"></div>
 								</h2>
 								<div class="about-service ul-li-block clearfix">
 									<ul class="clearfix">
 										<li data-aos="fade-up" data-aos-delay="100">
 											<div class="pl-0">
-												<h4 class="service-title">Gold</h4>
-												<p class="mb-0">
-													1 Gram.
-												</p>
-												<p class="mb-0">
-													8 Gram.
-												</p>
+												<h4 class="service-title">22K Gold 1 Gram:
+													₹<span id="homeGold22K"></span>
+												</h4>
+											</div>
+											<div class="pl-0">
+												<h4 class="service-title">22K Gold 8 Gram:
+													₹<span id="homeGold22K8"></span>
+												</h4>
+											</div>
+											<div class="pl-0">
+												<h4 class="service-title">18K Gold 1 Gram:
+													₹<span id="homeGold18K"></span>
+												</h4>
 											</div>
 										</li>
 
 										<li data-aos="fade-up" data-aos-delay="100">
 											<div class="pl-0">
-												<h4 class="service-title">Silver</h4>
-												<p class="mb-0">
-													1 Gram.
-												</p>
+												<h4 class="service-title">Silver 1 Gram:
+													₹<span id="homeSilver1G"></span>
+												</h4>
 											</div>
 										</li>
 									</ul>
@@ -290,43 +296,9 @@
 			================================================== -->
 
 
-			<!-- Works-section - start
-			================================================== -->
-			<!-- <section id="portfolio-section" class=" portfolio-section sec-ptb-100 clearfix">
-				<div class="container">
-
-					<div class="section-title mb-60" data-aos="fade-up" data-aos-delay="100">
-						<h2 class="title-text">Latest Projects</h2>
-						<p class="mb-0">Working together to make your vision a reality</p>
-					</div>
-
-					<div id="portfolio-carousel-3" class="portfolio-carousel-3 owl-carousel arrow-top-right owl-theme" data-aos="fade-up" data-aos-delay="300">
-						<div class="item clearfix">
-							<div class="item-image">
-								<img src="assets/images/custom/MRK3337.jpg" alt="image_not_found">
-							</div>
-							<div class="item-content">
-								<h3 class="item-title mb-60">Creating more wonders each year.</h3>
-								<div class="address-info ul-li clearfix">
-									<ul class="clearfix">
-										<li>Residental.</li>
-										<li>Pazhayangadi.</li>
-										<li>Kannur</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-				</div>
-			</section> -->
-			<!-- Works-section - end
-			================================================== -->
-
 			<!-- portfolio-section - start
 			================================================== -->
-			<section id="portfolio-section" class="portfolio-section sec-ptb-100 pt-0 text-center clearfix">
+			<section id="portfolio-section" class="portfolio-section sec-ptb-100 pt-0 pb-4 text-center clearfix">
 				<div id="ProductsContent" class="">
 
 					<div class="our-works-custom section-title text-center mb-60" data-aos="fade-up" data-aos-delay="100">
@@ -351,97 +323,10 @@
 						<section id="portfolio-section" class="portfolio-section clearfix">
 							<div class="container">
 
-								<div class="row">
+								<div class="row" id="home-products">
 
-									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-										<a href="#!" class="portfolio-fullimage add-effect" data-aos="fade-up" data-aos-delay="300">
-											<img src="assets/images/portfolio/10_freelancer/img_6.jpg" alt="image_not_found">
-											<span class="item-content-2">
-												<strong class="item-title">Product</strong>
-												<small class="item-brand">Description</small>
-											</span>
-										</a>
-									</div>
 
-									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-										<a href="#!" class="portfolio-fullimage add-effect" data-aos="fade-up" data-aos-delay="300">
-											<img src="assets/images/portfolio/10_freelancer/img_6.jpg" alt="image_not_found">
-											<span class="item-content-2">
-												<strong class="item-title">Product</strong>
-												<small class="item-brand">Description</small>
-											</span>
-										</a>
-									</div>
-
-									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-										<a href="#!" class="portfolio-fullimage add-effect" data-aos="fade-up" data-aos-delay="300">
-											<img src="assets/images/portfolio/10_freelancer/img_6.jpg" alt="image_not_found">
-											<span class="item-content-2">
-												<strong class="item-title">Product</strong>
-												<small class="item-brand">Description</small>
-											</span>
-										</a>
-									</div>
-
-									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-										<a href="#!" class="portfolio-fullimage add-effect" data-aos="fade-up" data-aos-delay="300">
-											<img src="assets/images/portfolio/10_freelancer/img_6.jpg" alt="image_not_found">
-											<span class="item-content-2">
-												<strong class="item-title">Product</strong>
-												<small class="item-brand">Description</small>
-											</span>
-										</a>
-									</div>
-
-									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-										<a href="#!" class="portfolio-fullimage add-effect" data-aos="fade-up" data-aos-delay="300">
-											<img src="assets/images/portfolio/10_freelancer/img_6.jpg" alt="image_not_found">
-											<span class="item-content-2">
-												<strong class="item-title">Product</strong>
-												<small class="item-brand">Description</small>
-											</span>
-										</a>
-									</div>
-
-									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-										<a href="#!" class="portfolio-fullimage add-effect" data-aos="fade-up" data-aos-delay="300">
-											<img src="assets/images/portfolio/10_freelancer/img_6.jpg" alt="image_not_found">
-											<span class="item-content-2">
-												<strong class="item-title">Product</strong>
-												<small class="item-brand">Description</small>
-											</span>
-										</a>
-									</div>
-
-									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-										<a href="#!" class="portfolio-fullimage add-effect" data-aos="fade-up" data-aos-delay="300">
-											<img src="assets/images/portfolio/10_freelancer/img_6.jpg" alt="image_not_found">
-											<span class="item-content-2">
-												<strong class="item-title">Product</strong>
-												<small class="item-brand">Description</small>
-											</span>
-										</a>
-									</div>
-
-									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-										<a href="#!" class="portfolio-fullimage add-effect" data-aos="fade-up" data-aos-delay="300">
-											<img src="assets/images/portfolio/10_freelancer/img_6.jpg" alt="image_not_found">
-											<span class="item-content-2">
-												<strong class="item-title">Product</strong>
-												<small class="item-brand">Description</small>
-											</span>
-										</a>
-									</div>
-
-									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-										<a href="#!" class="portfolio-fullimage add-effect" data-aos="fade-up" data-aos-delay="300">
-											<img src="assets/images/portfolio/10_freelancer/img_6.jpg" alt="image_not_found">
-											<span class="item-content-2">
-												<strong class="item-title">Product</strong>
-												<small class="item-brand">Description</small>
-											</span>
-										</a>
-									</div>
+								</div>
 
 								</div>
 
@@ -450,8 +335,8 @@
 						<!-- portfolio-section - end
 						================================================== -->
 
-					<div class="btn-wrap text-center clearfix mt-4" data-aos="fade-up" data-aos-delay="100">
-						<a href="portfolio.html" class="btn">More Products</a>
+					<div class="btn-wrap text-center clearfix mb-60" data-aos="fade-up" data-aos-delay="100">
+						<a href="products.html" class="btn">More Products</a>
 					</div>
 
 				</div>
@@ -459,7 +344,7 @@
 			<!-- portfolio-section - end
 			================================================== -->
 
-			<div id="AboutContent" class="about-us-custom section-title text-center mb-60" data-aos="fade-up" data-aos-delay="100">
+			<div id="AboutContent" class="about-us-custom pt-5 section-title text-center mb-60" data-aos="fade-up" data-aos-delay="100">
 				<h2 class="title-text mb-15">About Us</h2>
 				<p class="mb-0">The perfection we make</p>
 			</div>
@@ -472,7 +357,7 @@
 
 						<div class="col-lg-4 col-md-7 col-sm-8 col-xs-12">
 							<div class="about-image" data-aos="fade-up" data-aos-delay="100">
-								<img src="assets/images/custom/custom-gold03.jpg" alt="image_not_found">
+								<img src="assets/images/backgrounds/1.jpg" alt="image_not_found">
 							</div>
 						</div>
 
@@ -496,85 +381,6 @@
 			<!-- about-section - end
 			================================================== -->
 
-			<!-- about-section - start
-			================================================== -->
-			<!-- <section id="about-section" class="padding-top-custom padding-bottom-custom-about-us about-section sec-ptb-100 clearfix">
-				<div class="container">
-					<div class="row align-items-center justify-content-lg-between justify-content-md-between justify-content-sm-center">
-
-						<div class="col-lg-5 col-md-6 col-sm-8 col-xs-12">
-							<div class="about-image-about" data-aos="fade-up" data-aos-delay="100">
-								<img src="assets/images/custom/custom-image04.png" alt="image_not_found">
-							</div>
-						</div>
-
-						<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
-							<div class="about-content" data-aos="fade-up" data-aos-delay="300">
-								<h2 class="sub-heading-custom item-title mb-60">
-									A home is the best thing that can happen to you, and we make that precisely yours.
-								</h2>
-								<p class="mb-0 line-left">
-									Our dedicated team of  interior designers and product designers
-									ensure that our products and designs are up-to-date and timeless
-									at the same time. Our Research & development and Quality assurance
-									team works side by side to ensure the technology and design is both
-									cutting edge and ergonomic. We put all our efforts and time in creating
-									designs and products that would lift the aesthetics and functionality
-									of your home.
-								</p>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</section> -->
-			<!-- about-section - end
-			================================================== -->
-
-			<!-- service-section - start
-			================================================== -->
-			<!-- <section class="padding-top-custom service-section sec-ptb-100 text-center clearfix">
-				<div class="container">
-
-					<div class="row justify-content-center">
-						<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-							<div class="section-title size-increase" data-aos="fade-up" data-aos-delay="100">
-								<h2 class="about-us-subheading-custom title-text mb-0">
-									The works we have done has moved different lifes and the products
-									we have made has touched a million lifes.
-								</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section> -->
-			<!-- service-section - end
-			================================================== -->
-
-			<!-- howtouse-section - start
-			================================================== -->
-			<!-- <section id="howtouse-section" class="howtouse-section sec-ptb-100 bg-default-black text-white clearfix">
-				<div class="container">
-					<div class="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
-
-						<div class="col-lg-7 col-md-8 col-sm-10 col-xs-12">
-							<div class="section-title size-increase" data-aos="fade-right" data-aos-delay="100">
-								<h2 class="title-text mb-0">
-									Experience our way of building things. Watch us build the bits and bytes of your dream home.
-								</h2>
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-md-8 col-sm-10 col-xs-12 text-center">
-							<a class="popup-video" href="https://www.youtube.com/embed/POQ45OSZbpU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-aos="zoom-in" data-aos-delay="300">
-								<i class="icon-play321"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</section> -->
-			<!-- howtouse-section - end
-			================================================== -->
 
 			<!-- partners-section - start
 			================================================== -->
@@ -584,26 +390,26 @@
 
 						<div class="item">
 							<a class="partner-logo item-grayscale" href="#!">
-								<img class="before-image" src="assets/images/partners/img_5.png" alt="image_not_found">
-								<img class="after-image" src="assets/images/partners/img_5.png" alt="image_not_found">
+								<img class="before-image" src="assets/images/partners/bis.png" alt="image_not_found">
+								<img class="after-image" src="assets/images/partners/bis.png" alt="image_not_found">
 							</a>
 						</div>
 						<div class="item">
 							<a class="partner-logo item-grayscale" href="#!">
-								<img class="before-image" src="assets/images/partners/img_6.png" alt="image_not_found">
-								<img class="after-image" src="assets/images/partners/img_6.png" alt="image_not_found">
+								<img class="before-image" src="assets/images/partners/916.png" alt="image_not_found">
+								<img class="after-image" src="assets/images/partners/916.png" alt="image_not_found">
 							</a>
 						</div>
 						<div class="item">
 							<a class="partner-logo item-grayscale" href="#!">
-								<img class="before-image" src="assets/images/partners/img_7.png" alt="image_not_found">
-								<img class="after-image" src="assets/images/partners/img_7.png" alt="image_not_found">
+								<img class="before-image" src="assets/images/partners/igi.png" alt="image_not_found">
+								<img class="after-image" src="assets/images/partners/igi.png" alt="image_not_found">
 							</a>
 						</div>
 						<div class="item">
 							<a class="partner-logo item-grayscale" href="#!">
-								<img class="before-image" src="assets/images/partners/img_8.png" alt="image_not_found">
-								<img class="after-image" src="assets/images/partners/img_8.png" alt="image_not_found">
+								<img class="before-image" src="assets/images/partners/silver.png" alt="image_not_found">
+								<img class="after-image" src="assets/images/partners/silver.png" alt="image_not_found">
 							</a>
 						</div>
 
@@ -779,23 +585,28 @@
 						</div>
 					</div>
 
-					<form id="contact_form" action="https://getform.io/f/8d4b2855-6559-40c4-bfb3-fcfa1d66ce80" method="POST">
+					<form id="enquiry_form">
 						<div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
 							<div class="col-lg-4">
 								<div class="form-item">
-									<input type="text" name="name" placeholder="Full Name">
+									<input id="enquiry_name" type="text" name="name" placeholder="Full Name">
 								</div>
 							</div>
 
 							<div class="col-lg-4">
 								<div class="form-item">
-									<input type="email" name="email" placeholder="Email Address">
+									<input id="enquiry_phone" type="text" name="mobile" placeholder="Mobile Number">
 								</div>
 							</div>
 
 							<div class="col-lg-4">
 								<div class="form-item">
-									<input type="text" name="message" placeholder="Mobile Number">
+									<select class="form-control" id="enquiry_subject" type="text" name="Subject">
+										<option>Select Subject</option>
+									  <option>Sales Enquiry</option>
+										<option>Corporate Enquiry</option>
+										<option>Complaints</option>
+									</select>
 								</div>
 							</div>
 
@@ -898,9 +709,18 @@
 		<!-- mobile menu - jquery include -->
     <script src="assets/js/mCustomScrollbar.js"></script>
 
+		<!-- Firebase Database JS -->
+		<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+	  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+	  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+	  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-storage.js"></script>
+
 		<!-- custom - jquery include -->
+		<script src="https://momentjs.com/downloads/moment.js"></script>
 		<script src="assets/js/custom.js"></script>
 		<script src="assets/js/enquiry.js"></script>
+		<script src="assets/js/products.js"></script>
+		<script src="assets/js/gold-rate.js"></script>
 		<script src="assets/js/custom-js.js"></script>
 		<script src="assets/js/preloder.js"></script>
 

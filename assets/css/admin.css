@@ -1,0 +1,17 @@
+
+.loading {
+
+  display: none;
+  font-size: 24px;
+}
+
+.done {
+
+  display: none;
+  font-size: 24px;
+}
+
+#product_form h4 {
+
+  margin-top: 60%;
+}
