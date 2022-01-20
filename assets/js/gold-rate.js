@@ -42,7 +42,7 @@ function checkAPILoader() {
   if (goldRateArray != 0) {
 
     goldRateCardUpdate();
-    if (window.location.pathname == '/aishagold.com' || window.location.pathname == '/aishagold.com/index.html') {
+    if (window.location.pathname == '/aishagold.com/' || window.location.pathname == '/aishagold.com/index.html') {
 
       goldRateHomeDisplay();
     }
