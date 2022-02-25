@@ -55,7 +55,7 @@ setInterval(function() {
     firebase.app("storageApp03").auth().signOut();
     window.location.href = "/admin-signin.html";
   }
-}, 2600);
+}, 3600);
 
 function chooseUpload() {
 
@@ -105,13 +105,14 @@ function submitForm(e) {
 
   var title = getInput('product-title');
   var category = getInput('product-category');
+  var type = getInput('product-type');
   var karat = getInput('product-karat');
   var gram = getInput('product-gram');
 
-  saveProduct(title, category, karat, gram);
+  saveProduct(title, category, type, karat, gram);
 }
 
-function saveProduct(title, category, karat, gram) {
+function saveProduct(title, category, type, karat, gram) {
 
   var productData = productsRef.push();
   productData.set({
@@ -119,6 +120,7 @@ function saveProduct(title, category, karat, gram) {
       timestamp: moment().format('DD/MM/YYYY h:mm:ss a'),
       title: title,
       category: category,
+      type: type,
       karat: karat,
       gram: gram,
       productURL01: document.querySelector('#previewImageTagID01').src,
@@ -136,6 +138,7 @@ function saveProduct(title, category, karat, gram) {
       document.querySelector('#previewImageTagID01').src = '';
       document.querySelector('#previewImageTagID02').src = '';
       document.querySelector('#previewImageTagID03').src = '';
+      location.reload();
     })
     .catch(function(error) {
 

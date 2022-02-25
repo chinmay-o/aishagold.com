@@ -1,6 +1,7 @@
 
 
 $(".ba-we-love-subscribers-fab").click(function() {
+
 	$('.ba-we-love-subscribers-fab .wrap').toggleClass("ani");
 	$('.ba-we-love-subscribers').toggleClass("open");
 	$('.img-fab.img').toggleClass("close");
@@ -77,6 +78,14 @@ $("#beginNow").click(function() {
       }, 1000);
     $(".sidebar-menu, .overlay").removeClass("active");
 });
+
+function productsMove() {
+
+	$('html, body').animate({
+			scrollTop: $("#ProductsContent").offset().top - 120
+		}, 1000);
+	$(".sidebar-menu, .overlay").removeClass("active");
+}
 
 $("#beginNowTwo").click(function() {
 

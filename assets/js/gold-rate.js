@@ -1,5 +1,4 @@
 
-
 let goldRateDB = firebase.database().ref('goldRate-database').limitToLast(1);
 
 let todaysGoldRate;
@@ -42,7 +41,7 @@ function checkAPILoader() {
   if (goldRateArray != 0) {
 
     goldRateCardUpdate();
-    if (window.location.pathname == '/aishagold.com/' || window.location.pathname == '/aishagold.com/index.html') {
+    if (fileName == '' || fileName == 'index.html') {
 
       goldRateHomeDisplay();
     }

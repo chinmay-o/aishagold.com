@@ -127,30 +127,6 @@
           <div class="row justify-content-left" data-aos="fade-up" data-aos-delay="300">
             <div class="col-lg-3 mb-4">
               <div class="form-item">
-                <input id="product-title" type="text" name="Title" placeholder="Product Name">
-              </div>
-              <div class="form-item">
-                <select class="form-control" id="product-category" name="Category">
-                  <option default>Select Category</option>
-                  <option>Antique</option>
-                  <option>Arabic</option>
-                  <option>Wedding</option>
-                  <option>Kuwait</option>
-                </select>
-              </div>
-              <div class="form-item">
-                <select class="form-control" id="product-karat" name="Karat">
-                  <option default>Select Karat</option>
-                  <option>22K</option>
-                  <option>18K</option>
-                  <option>Silver</option>
-                  <option>Lightweight</option>
-                </select>
-              </div>
-              <div class="form-item">
-                <input id="product-gram" type="text" name="Grams" placeholder="Grams">
-              </div>
-              <div class="form-item">
                 <input onclick="chooseUpload()" type="file" id="product-img" accept="image/jpeg">
                 <span class="loading">
                   <i class="fa fa-circle-o-notch fa-spin"></i>
@@ -158,6 +134,41 @@
                 <span class="done">
                   <i class="fa fa-check"></i>
                 </span>
+              </div>
+              <div class="form-item">
+                <input id="product-title" type="text" name="Title" placeholder="Product Name">
+              </div>
+              <div class="form-item">
+                <select class="form-control" id="product-category" name="Category">
+                  <option default>Select Category</option>
+                  <option>Kuwaiti</option>
+                  <option>Semi-Antique</option>
+                  <option>Antique</option>
+                  <option>Rosegold</option>
+                  <option>Kerala Work</option>
+                  <option>Bombay Work</option>
+                  <option>Cutting Model</option>
+                  <option>Kolkata Work</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <select class="form-control" id="product-type" name="Type">
+                  <option>Select Type</option>
+                  <option>Necklace</option>
+                  <option>Bangles</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <select class="form-control" id="product-karat" name="Karat">
+                  <option>Select Karat</option>
+                  <option>22CT</option>
+                  <option>18CT</option>
+                  <option>Silver</option>
+                  <option>Lightweight</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <input id="product-gram" type="text" name="Grams" placeholder="Grams">
               </div>
               <div class="text-center" data-aos="fade-up" data-aos-delay="500">
                 <button type="submit" class="btn" value="submit">Submit</button>
@@ -207,7 +218,7 @@
 									<th scope="col">Title</th>
                   <th scope="col">Category</th>
 									<th scope="col">Gram</th>
-									<th scope="col">Karat</th>
+									<th scope="col">type</th>
 								</tr>
 							</thead>
 							<tbody id="product-listings"></tbody>
