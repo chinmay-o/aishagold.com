@@ -125,9 +125,12 @@ function saveRates(date, rate22K, rate18K){
 
     console.log('Synchronization succeeded');
     $('#goldRate_form')[0].reset();
+    $("#gold-rate-submit").css("display", "block");
+    $("#gold-rate-submit").text("Gold Rate Successfully Submitted");
     setTimeout(function () {
 
       goldRateForm();
+      $("#gold-rate-submit").css("display", "none");
     }, 6000);
   })
   .catch(function(error) {
