@@ -30,6 +30,7 @@ productsListRef.on("value", function(snapshot) {
       key: key.substr(key.length - 6).toUpperCase(),
       title: snapshot.val()[key].title,
       karat: snapshot.val()[key].karat,
+      type: snapshot.val()[key].type,
       gram: snapshot.val()[key].gram,
       category: snapshot.val()[key].category,
       productURL01: snapshot.val()[key].productURL01,
@@ -46,7 +47,7 @@ productsListRef.on("value", function(snapshot) {
 
 var productLoad = setInterval(productsShowcase, 100);
 
-function productsShowcase () {
+function productsShowcase() {
 
   if (arrayLoad) {
 
@@ -71,34 +72,180 @@ function errorCode02(productSet) {
   console.log('hello');
 }
 
+function shuffle(array) {
+
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
+function filterNone() {
+
+  $(".Antique").css("display", "block");
+  $(".Semi-Antique").css("display", "block");
+  $(".Kuwaiti").css("display", "block");
+  $(".Kerala").css("display", "block");
+  $(".Bombay").css("display", "block");
+  $(".Kolkata").css("display", "block");
+  $(".Rosegold").css("display", "block");
+  $(".Cutting").css("display", "block");
+}
+
+function filterAntique() {
+
+  $(".Antique").css("display", "block");
+  $(".Semi-Antique").css("display", "block");
+  $(".Kuwaiti").css("display", "none");
+  $(".Kerala").css("display", "none");
+  $(".Bombay").css("display", "none");
+  $(".Kolkata").css("display", "none");
+  $(".Rosegold").css("display", "none");
+  $(".Cutting").css("display", "none");
+}
+
+function filterKuwaiti() {
+
+  $(".Antique").css("display", "none");
+  $(".Semi-Antique").css("display", "none");
+  $(".Kuwaiti").css("display", "block");
+  $(".Kerala").css("display", "none");
+  $(".Bombay").css("display", "none");
+  $(".Kolkata").css("display", "none");
+  $(".Rosegold").css("display", "none");
+  $(".Cutting").css("display", "none");
+}
+
+
+function filterKerala() {
+
+  $(".Antique").css("display", "none");
+  $(".Semi-Antique").css("display", "none");
+  $(".Kuwaiti").css("display", "none");
+  $(".Kerala").css("display", "block");
+  $(".Bombay").css("display", "none");
+  $(".Kolkata").css("display", "none");
+  $(".Rosegold").css("display", "none");
+  $(".Cutting").css("display", "none");
+}
+
+
+function filterBombay() {
+
+  $(".Antique").css("display", "none");
+  $(".Semi-Antique").css("display", "none");
+  $(".Kuwaiti").css("display", "none");
+  $(".Kerala").css("display", "none");
+  $(".Bombay").css("display", "block");
+  $(".Kolkata").css("display", "none");
+  $(".Rosegold").css("display", "none");
+  $(".Cutting").css("display", "none");
+}
+
+
+function filterKolkata() {
+
+  $(".Antique").css("display", "none");
+  $(".Semi-Antique").css("display", "none");
+  $(".Kuwaiti").css("display", "none");
+  $(".Kerala").css("display", "none");
+  $(".Bombay").css("display", "none");
+  $(".Kolkata").css("display", "block");
+  $(".Rosegold").css("display", "none");
+  $(".Cutting").css("display", "none");
+}
+
+
+function filterRosegold() {
+
+  $(".Antique").css("display", "none");
+  $(".Semi-Antique").css("display", "none");
+  $(".Kuwaiti").css("display", "none");
+  $(".Kerala").css("display", "none");
+  $(".Bombay").css("display", "none");
+  $(".Kolkata").css("display", "none");
+  $(".Rosegold").css("display", "block");
+  $(".Cutting").css("display", "none");
+}
+
+function filterCutting() {
+
+  $(".Antique").css("display", "none");
+  $(".Semi-Antique").css("display", "none");
+  $(".Kuwaiti").css("display", "none");
+  $(".Kerala").css("display", "none");
+  $(".Bombay").css("display", "none");
+  $(".Kolkata").css("display", "none");
+  $(".Rosegold").css("display", "none");
+  $(".Cutting").css("display", "block");
+}
+
+
+function filterProducts(className) {
+
+
+  $("." + className).css("display", "block");
+}
+
 function productHTML() {
+
+  var tempShuffledArray = shuffle(productArray);
 
   if (fileName == 'products.html') {
 
-    for (var i = 0; i < productArray.length; i++) {
+    for (var i = 0; i < tempShuffledArray.length; i++) {
 
-      document.getElementById('products-pages').innerHTML += '<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 element-item prints " data-category="'+ productArray[i].category +'">' +
+      if (tempShuffledArray[i].gram == '') {
+
+        document.getElementById('products-pages').innerHTML += '<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 element-item '+ tempShuffledArray[i].category +'" data-category="'+ tempShuffledArray[i].category +'">' +
         '<div class="portfolio-fullimage bg-white">' +
-        '<img id='+ productArray[i].key +' onerror="errorCode('+ productArray[i].key.toString() +')" src="' + productArray[i].productURL01 + '" alt="image_not_found">' +
+        '<img id=' + tempShuffledArray[i].key + ' onerror="errorCode(' + tempShuffledArray[i].key.toString() + ')" src="' + tempShuffledArray[i].productURL03 + '" alt="image_not_found">' +
         '<a href="#!" class="details-btn"><i class="fal fa-plus"></i></a>' +
         '<div class="item-content">' +
-        '<h3 class="item-title">'+ productArray[i].title +'</h3>' +
-        '<span class="item-brand">'+ productArray[i].gram + ' | ' + productArray[i].karat +'</span>' +
+        '<h3 class="item-title">' + tempShuffledArray[i].title + '</h3>' +
+        '<span class="item-brand">' + tempShuffledArray[i].karat + '</span>' +
         '</div>' +
         '</div>' +
         '</div>'
+
+      } else {
+
+        document.getElementById('products-pages').innerHTML += '<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 element-item '+ tempShuffledArray[i].category +'" data-category="'+ tempShuffledArray[i].category +'">' +
+        '<div class="portfolio-fullimage bg-white">' +
+        '<img id=' + tempShuffledArray[i].key + ' onerror="errorCode(' + tempShuffledArray[i].key.toString() + ')" src="' + tempShuffledArray[i].productURL03 + '" alt="image_not_found">' +
+        '<a href="#!" class="details-btn"><i class="fal fa-plus"></i></a>' +
+        '<div class="item-content">' +
+        '<h3 class="item-title">' + tempShuffledArray[i].title + '</h3>' +
+        '<span class="item-brand">' + tempShuffledArray[i].gram + ' Grams | ' + tempShuffledArray[i].karat + '</span>' +
+        '</div>' +
+        '</div>' +
+        '</div>'
+      }
     }
 
   } else if (fileName == 'add-products.html') {
 
-    for(var i = 0; i < productArray.length; i++) {
+    for(var i = 0; i < tempShuffledArray.length; i++) {
 
       document.getElementById('product-listings').innerHTML += '<tr data-aos="fade-up" data-aos-delay="200">'+
-        '<td><img src="'+ productArray[i].productURL01 +'" width="100" alt=""></td>'+
-        '<td><h6 class="item-title">'+ productArray[i].title +'</h6></td>'+
-        '<td><h6 class="item-title">'+ productArray[i].category +'</h6></td>'+
-        '<td><h6 class="item-title">'+ productArray[i].gram +'</h6></td>'+
-        '<td><h6 class="item-title">'+ productArray[i].karat +'</h6></td>'+
+        '<td><h6 class="item-title">'+ tempShuffledArray[i].key +'</h6></td>'+
+        '<td><img src="'+ tempShuffledArray[i].productURL02 +'" width="100" alt=""></td>'+
+        '<td><h6 class="item-title">'+ tempShuffledArray[i].title +'</h6></td>'+
+        '<td><h6 class="item-title">'+ tempShuffledArray[i].category +'</h6></td>'+
+        '<td><h6 class="item-title">'+ tempShuffledArray[i].gram +'</h6></td>'+
+        '<td><h6 class="item-title">'+ tempShuffledArray[i].type +'</h6></td>'+
+        '<td><h6 class="item-title">'+ tempShuffledArray[i].karat +'</h6></td>'+
         '</tr>';
     }
 
@@ -106,15 +253,29 @@ function productHTML() {
 
     for (var i = 0; i < 6; i++) {
 
-      document.getElementById('home-products').innerHTML += '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">' +
-        '<a href="#!" class="portfolio-fullimage add-effect">' +
-        '<img src="' + productArray[i].productURL01 + '" alt="image_not_found">' +
-        '<span class="item-content-2">' +
-        '<strong class="item-title">'+ productArray[i].title +'</strong>' +
-        '<small class="item-brand">'+ productArray[i].gram + ' | ' + productArray[i].karat +'</small>' +
-        '</span>' +
-        '</a>' +
-        '</div>'
+      if (tempShuffledArray[i].gram == '') {
+
+        document.getElementById('home-products').innerHTML += '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">' +
+          '<a href="#!" class="portfolio-fullimage add-effect">' +
+          '<img src="' + tempShuffledArray[i].productURL01 + '" alt="image_not_found">' +
+          '<span class="item-content-2">' +
+          '<strong class="item-title">'+ tempShuffledArray[i].title +'</strong>' +
+          '<small class="item-brand">'+ tempShuffledArray[i].karat +'</small>' +
+          '</span>' +
+          '</a>' +
+          '</div>'
+      } else {
+
+        document.getElementById('home-products').innerHTML += '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">' +
+          '<a href="#!" class="portfolio-fullimage add-effect">' +
+          '<img src="' + tempShuffledArray[i].productURL01 + '" alt="image_not_found">' +
+          '<span class="item-content-2">' +
+          '<strong class="item-title">'+ tempShuffledArray[i].title +'</strong>' +
+          '<small class="item-brand">'+ tempShuffledArray[i].gram + ' Grams | ' + tempShuffledArray[i].karat +'</small>' +
+          '</span>' +
+          '</a>' +
+          '</div>'
+      }
     }
   }
 }

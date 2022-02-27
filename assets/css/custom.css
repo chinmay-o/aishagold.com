@@ -138,6 +138,11 @@
   padding-bottom: 20px !important;
 }
 
+.founder-quote {
+
+  font-size: 26px !important;
+}
+
 @media screen and (max-width: 767px) {
 
   .brand-logo-footer {

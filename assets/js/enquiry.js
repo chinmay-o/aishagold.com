@@ -47,9 +47,15 @@ function saveEnquiry(name, mobile, subject){
 
     console.log('Synchronization succeeded');
     $('#enquiry_form')[0].reset();
+    $("#enquiry-message").css("display", "block");
+    $("#enquiry-message").text("Successfully Submitted. Aisha gold will contact you.");
+    // setTimeout($("#enquiry-message").css("display", "none"), 6000);
   })
   .catch(function(error) {
 
     console.log('Synchronization failed');
+    $("#enquiry-message").css("display", "block");
+    $("#enquiry-message").text("Failed Submission. Try again after reloading.");
+    // setTimeout($("#enquiry-message").css("display", "none"), 6000);
   });
 }
