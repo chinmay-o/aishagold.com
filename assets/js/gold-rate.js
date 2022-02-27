@@ -22,7 +22,6 @@ function goldRateCardUpdate() {
   document.getElementById('goldRate22K').innerHTML = goldRateArray[0].rate22K;
   document.getElementById('goldRate22K8').innerHTML = (goldRateArray[0].rate22K)*8;
   document.getElementById('goldRate18K').innerHTML = goldRateArray[0].rate18K;
-  document.getElementById('goldRateSilver').innerHTML = goldRateArray[0].rateSilver;
 }
 
 function goldRateHomeDisplay() {
@@ -31,7 +30,6 @@ function goldRateHomeDisplay() {
   document.getElementById('homeGold22K').innerHTML = goldRateArray[0].rate22K;
   document.getElementById('homeGold22K8').innerHTML = (goldRateArray[0].rate22K)*8;
   document.getElementById('homeGold18K').innerHTML = goldRateArray[0].rate18K;
-  document.getElementById('homeSilver1G').innerHTML = goldRateArray[0].rateSilver;
 }
 
 var loadAPI = setInterval(checkAPILoader, 100);
@@ -41,7 +39,7 @@ function checkAPILoader() {
   if (goldRateArray != 0) {
 
     goldRateCardUpdate();
-    if (fileName == '' || fileName == 'index.html') {
+    if (window.location.pathname.split("/")[1] == '' || window.location.pathname.split("/")[1] == 'index.html') {
 
       goldRateHomeDisplay();
     }
