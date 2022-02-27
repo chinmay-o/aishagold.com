@@ -108,12 +108,11 @@ function submitForm(e) {
   var date = getInput('date');
   var rate22K = getInput('22K');
 	var rate18K = getInput('18K');
-  var rateSilver = getInput('silver');
 
-  saveRates(date, rate22K, rate18K, rateSilver);
+  saveRates(date, rate22K, rate18K);
 }
 
-function saveRates(date, rate22K, rate18K, rateSilver){
+function saveRates(date, rate22K, rate18K){
 
   var todaysRate = goldRef.push();
   todaysRate.set({
@@ -122,7 +121,6 @@ function saveRates(date, rate22K, rate18K, rateSilver){
     date: date,
     rate22K: rate22K,
     rate18K: rate18K,
-    rateSilver: rateSilver,
   })
   .then(function() {
 

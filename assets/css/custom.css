@@ -143,6 +143,34 @@
   font-size: 26px !important;
 }
 
+.portfolio-carousel-3 .item .item-image {
+
+  right: 250px;
+}
+
+@media screen and (max-width: 1080px) {
+
+  .portfolio-carousel-3 .item .item-image {
+
+    right: 360px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+
+  .portfolio-carousel-3 .item .item-image {
+
+    right: 0;
+  }
+
+  .portfolio-carousel-3 .item .item-content {
+
+    max-width: 330px;
+    padding: 25px 30px;
+    background-color: rgb(255 255 255 / 50%);
+  }
+}
+
 @media screen and (max-width: 767px) {
 
   .brand-logo-footer {
