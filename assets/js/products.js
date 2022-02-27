@@ -211,7 +211,7 @@ function productHTML() {
         document.getElementById('products-pages').innerHTML += '<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 element-item '+ tempShuffledArray[i].category +'" data-category="'+ tempShuffledArray[i].category +'">' +
         '<div class="portfolio-fullimage bg-white">' +
         '<img id=' + tempShuffledArray[i].key + ' onerror="errorCode(' + tempShuffledArray[i].key.toString() + ')" src="' + tempShuffledArray[i].productURL03 + '" alt="image_not_found">' +
-        '<a href="https://api.whatsapp.com/send?phone=919847916954&text=Hi" class="details-btn"><i class="fal fa-plus"></i></a>' +
+        '<a href="https://api.whatsapp.com/send?phone=919847916954&text=Hi" class="details-btn"><i class="fab fa-whatsapp"></i></a>' +
         '<div class="item-content">' +
         '<h3 class="item-title">' + tempShuffledArray[i].title + '</h3>' +
         '<span class="item-brand">' + tempShuffledArray[i].karat + '</span>' +
@@ -224,7 +224,7 @@ function productHTML() {
         document.getElementById('products-pages').innerHTML += '<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 element-item '+ tempShuffledArray[i].category +'" data-category="'+ tempShuffledArray[i].category +'">' +
         '<div class="portfolio-fullimage bg-white">' +
         '<img id=' + tempShuffledArray[i].key + ' onerror="errorCode(' + tempShuffledArray[i].key.toString() + ')" src="' + tempShuffledArray[i].productURL03 + '" alt="image_not_found">' +
-        '<a href="https://api.whatsapp.com/send?phone=919847916954&text=Hi" class="details-btn"><i class="fal fa-plus"></i></a>' +
+        '<a href="https://api.whatsapp.com/send?phone=919847916954&text=Hi" class="details-btn"><i class="fab fa-whatsapp"></i></a>' +
         '<div class="item-content">' +
         '<h3 class="item-title">' + tempShuffledArray[i].title + '</h3>' +
         '<span class="item-brand">' + tempShuffledArray[i].gram + ' Grams | ' + tempShuffledArray[i].karat + '</span>' +
@@ -256,7 +256,7 @@ function productHTML() {
       if (tempShuffledArray[i].gram == '') {
 
         document.getElementById('home-products').innerHTML += '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">' +
-          '<a href="#!" class="portfolio-fullimage add-effect">' +
+          '<a href="javascript:void()" class="portfolio-fullimage add-effect">' +
           '<img src="' + tempShuffledArray[i].productURL01 + '" alt="image_not_found">' +
           '<span class="item-content-2">' +
           '<strong class="item-title">'+ tempShuffledArray[i].title +'</strong>' +
@@ -267,7 +267,7 @@ function productHTML() {
       } else {
 
         document.getElementById('home-products').innerHTML += '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">' +
-          '<a href="#!" class="portfolio-fullimage add-effect">' +
+          '<a href="javascript:void()" class="portfolio-fullimage add-effect">' +
           '<img src="' + tempShuffledArray[i].productURL01 + '" alt="image_not_found">' +
           '<span class="item-content-2">' +
           '<strong class="item-title">'+ tempShuffledArray[i].title +'</strong>' +

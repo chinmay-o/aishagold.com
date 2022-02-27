@@ -34,6 +34,7 @@ function submitForm(e) {
 
       var errorCode = error.code;
       var errorMessage = error.message;
+      $("#login-error").text("Error:"+ error.code +". Please check the username or password you entered.");
     });
 }
 

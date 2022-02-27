@@ -77,7 +77,6 @@ function goldRateForm() {
   document.getElementById('date').value = moment().format('DD/MM/YYYY');
   document.getElementById('22K').value = goldRateArray[0].rate22K;
   document.getElementById('18K').value = goldRateArray[0].rate18K;
-  document.getElementById('silver').value = goldRateArray[0].rateSilver;
 }
 
 var loadAPI = setInterval(checkAPILoader, 100);
@@ -95,7 +94,7 @@ setInterval(function() {
 
   if(firebase.auth().currentUser == null) {
 
-    window.location.href = "/admin-signin.html";
+    window.location.href = "/signin.html";
   }
 }, 2600);
 
@@ -157,7 +156,7 @@ function signingOut() {
 
   firebase.auth().signOut().then(() => {
 
-    window.location.href = "/admin-signin.html";
+    window.location.href = "/signin.html";
   }).catch((error) => {
 
     console.log('Signing Out Failed')

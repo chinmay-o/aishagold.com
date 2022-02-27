@@ -53,7 +53,7 @@ setInterval(function() {
 
     firebase.app("storageApp02").auth().signOut();
     firebase.app("storageApp03").auth().signOut();
-    window.location.href = "/admin-signin.html";
+    window.location.href = "/signin.html";
   }
 }, 3600);
 
@@ -90,7 +90,7 @@ function signOut() {
   firebase.app("storageApp03").auth().signOut();
   firebase.auth().signOut().then(() => {
 
-    window.location.href = "/admin-signin.html";
+    window.location.href = "/signin.html";
   }).catch((error) => {
 
     console.log('Signing Out Failed')
