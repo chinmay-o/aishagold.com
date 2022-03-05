@@ -76,7 +76,6 @@ function goldRateForm() {
 
   document.getElementById('date').value = moment().format('DD/MM/YYYY');
   document.getElementById('22K').value = goldRateArray[0].rate22K;
-  document.getElementById('18K').value = goldRateArray[0].rate18K;
 }
 
 var loadAPI = setInterval(checkAPILoader, 100);
@@ -106,12 +105,11 @@ function submitForm(e) {
 
   var date = getInput('date');
   var rate22K = getInput('22K');
-	var rate18K = getInput('18K');
 
-  saveRates(date, rate22K, rate18K);
+  saveRates(date, rate22K);
 }
 
-function saveRates(date, rate22K, rate18K){
+function saveRates(date, rate22K){
 
   var todaysRate = goldRef.push();
   todaysRate.set({
@@ -119,7 +117,6 @@ function saveRates(date, rate22K, rate18K){
 		timestamp: moment().format('DD/MM/YYYY h:mm:ss a'),
     date: date,
     rate22K: rate22K,
-    rate18K: rate18K,
   })
   .then(function() {
 

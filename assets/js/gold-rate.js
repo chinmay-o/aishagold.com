@@ -21,7 +21,6 @@ function goldRateCardUpdate() {
   document.getElementById('goldRateDate').innerHTML = goldRateArray[0].date;
   document.getElementById('goldRate22K').innerHTML = goldRateArray[0].rate22K;
   document.getElementById('goldRate22K8').innerHTML = (goldRateArray[0].rate22K)*8;
-  document.getElementById('goldRate18K').innerHTML = goldRateArray[0].rate18K;
 }
 
 function goldRateHomeDisplay() {
@@ -29,7 +28,6 @@ function goldRateHomeDisplay() {
   document.getElementById('homeGoldDate').innerHTML = goldRateArray[0].date;
   document.getElementById('homeGold22K').innerHTML = goldRateArray[0].rate22K;
   document.getElementById('homeGold22K8').innerHTML = (goldRateArray[0].rate22K)*8;
-  document.getElementById('homeGold18K').innerHTML = goldRateArray[0].rate18K;
 }
 
 var loadAPI = setInterval(checkAPILoader, 100);
